@@ -36,18 +36,6 @@ type Fish {
   southernMonths: [Int!]!
 }
 
-type FishConnection {
-  """
-  https://facebook.github.io/relay/graphql/connections.htm#sec-Edge-Types
-  """
-  edges: [FishEdge]
-
-  """
-  https://facebook.github.io/relay/graphql/connections.htm#sec-undefined.PageInfo
-  """
-  pageInfo: PageInfo!
-}
-
 type FishEdge {
   """https://facebook.github.io/relay/graphql/connections.htm#sec-Cursor"""
   cursor: String!
@@ -114,6 +102,11 @@ type PageInfo {
   startCursor: String
 }
 
+input PriceInputType {
+  max: Int
+  min: Int
+}
+
 type Query {
   """특정 물고기 정보를 가져옵니다."""
   fish(
@@ -138,6 +131,20 @@ type Query {
 
     """출현 기간"""
     month: Int
-  ): FishConnection!
+    price: PriceInputType
+  ): QueryFishes_Connection!
   foo: String!
+}
+
+type QueryFishes_Connection {
+  """
+  https://facebook.github.io/relay/graphql/connections.htm#sec-Edge-Types
+  """
+  edges: [FishEdge]
+
+  """
+  https://facebook.github.io/relay/graphql/connections.htm#sec-undefined.PageInfo
+  """
+  pageInfo: PageInfo!
+  totalCount: Int!
 }

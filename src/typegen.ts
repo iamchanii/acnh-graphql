@@ -21,6 +21,10 @@ declare global {
 }
 
 export interface NexusGenInputs {
+  PriceInputType: { // input type
+    max?: number | null; // Int
+    min?: number | null; // Int
+  }
 }
 
 export interface NexusGenEnums {
@@ -43,10 +47,6 @@ export interface NexusGenRootTypes {
     shadow: NexusGenEnums['FishShadow']; // FishShadow!
     southernMonths: number[]; // [Int!]!
   }
-  FishConnection: { // root type
-    edges?: Array<NexusGenRootTypes['FishEdge'] | null> | null; // [FishEdge]
-    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
-  }
   FishEdge: { // root type
     cursor: string; // String!
     node: NexusGenRootTypes['Fish']; // Fish!
@@ -62,6 +62,10 @@ export interface NexusGenRootTypes {
     startCursor?: string | null; // String
   }
   Query: {};
+  QueryFishes_Connection: { // root type
+    edges?: Array<NexusGenRootTypes['FishEdge'] | null> | null; // [FishEdge]
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
   String: string;
   Int: number;
   Float: number;
@@ -70,6 +74,7 @@ export interface NexusGenRootTypes {
 }
 
 export interface NexusGenAllTypes extends NexusGenRootTypes {
+  PriceInputType: NexusGenInputs['PriceInputType'];
   FishLocation: NexusGenEnums['FishLocation'];
   FishShadow: NexusGenEnums['FishShadow'];
   Hemisphere: NexusGenEnums['Hemisphere'];
@@ -89,10 +94,6 @@ export interface NexusGenFieldTypes {
     shadow: NexusGenEnums['FishShadow']; // FishShadow!
     southernMonths: number[]; // [Int!]!
   }
-  FishConnection: { // field return type
-    edges: Array<NexusGenRootTypes['FishEdge'] | null> | null; // [FishEdge]
-    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
-  }
   FishEdge: { // field return type
     cursor: string; // String!
     node: NexusGenRootTypes['Fish']; // Fish!
@@ -109,8 +110,13 @@ export interface NexusGenFieldTypes {
   }
   Query: { // field return type
     fish: NexusGenRootTypes['Fish']; // Fish!
-    fishes: NexusGenRootTypes['FishConnection']; // FishConnection!
+    fishes: NexusGenRootTypes['QueryFishes_Connection']; // QueryFishes_Connection!
     foo: string; // String!
+  }
+  QueryFishes_Connection: { // field return type
+    edges: Array<NexusGenRootTypes['FishEdge'] | null> | null; // [FishEdge]
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+    totalCount: number; // Int!
   }
 }
 
@@ -126,6 +132,7 @@ export interface NexusGenArgTypes {
       hemisphere?: NexusGenEnums['Hemisphere'] | null; // Hemisphere
       last?: number | null; // Int
       month?: number | null; // Int
+      price?: NexusGenInputs['PriceInputType'] | null; // PriceInputType
     }
   }
 }
@@ -135,9 +142,9 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "Fish" | "FishConnection" | "FishEdge" | "Hour" | "PageInfo" | "Query";
+export type NexusGenObjectNames = "Fish" | "FishEdge" | "Hour" | "PageInfo" | "Query" | "QueryFishes_Connection";
 
-export type NexusGenInputNames = never;
+export type NexusGenInputNames = "PriceInputType";
 
 export type NexusGenEnumNames = "FishLocation" | "FishShadow" | "Hemisphere";
 
