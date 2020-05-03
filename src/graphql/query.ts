@@ -1,5 +1,16 @@
-import { queryType, intArg } from '@nexus/schema';
+import { arg, enumType, intArg, queryType } from '@nexus/schema';
+import { connectionFromArray } from 'graphql-relay';
 import { Fish } from './fish';
+import filterFishes from './lib/filterFishes';
+
+export const Hemisphere = enumType({
+  name: 'Hemisphere',
+  description: '북반구, 남반구',
+  members: {
+    NORTHERN: 'northern',
+    SOUTHERN: 'southern',
+  },
+});
 
 export const Query = queryType({
   definition(t) {
@@ -26,10 +37,20 @@ export const Query = queryType({
         return result;
       },
     });
-    t.list.field('fishes', {
+    t.connectionField('fishes', {
       type: Fish,
-      description: '전체 물고기 목록을 가져옵니다.',
-      resolve: (_, __, ctx) => ctx.fishes,
+      additionalArgs: {
+        hemisphere: arg({
+          type: Hemisphere,
+          default: 'northern',
+          description: '북반구, 남반구 지정. month 필터 사용시 필요함.',
+        }),
+        month: intArg({
+          description: '출현 기간',
+        }),
+      },
+      resolve: (_, args, ctx) =>
+        connectionFromArray(filterFishes(ctx.fishes, args), args) as any,
     });
   },
 });

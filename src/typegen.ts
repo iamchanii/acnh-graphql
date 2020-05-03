@@ -4,9 +4,16 @@
  */
 
 import * as api from "./types"
+import { core, connectionPluginCore } from "@nexus/schema"
 
-
-
+declare global {
+  interface NexusGenCustomOutputMethods<TypeName extends string> {
+    connectionField<FieldName extends string>(
+            fieldName: FieldName, 
+            config: connectionPluginCore.ConnectionFieldConfig<TypeName, FieldName> 
+          ): void
+  }
+}
 
 
 declare global {
@@ -19,6 +26,7 @@ export interface NexusGenInputs {
 export interface NexusGenEnums {
   FishLocation: "clifftop" | "mouth" | "ocean" | "pier" | "pond" | "river"
   FishShadow: 4 | 3 | "narrow" | 2 | 5 | 1 | 6
+  Hemisphere: "northern" | "southern"
 }
 
 export interface NexusGenRootTypes {
@@ -35,9 +43,23 @@ export interface NexusGenRootTypes {
     shadow: NexusGenEnums['FishShadow']; // FishShadow!
     southernMonths: number[]; // [Int!]!
   }
+  FishConnection: { // root type
+    edges?: Array<NexusGenRootTypes['FishEdge'] | null> | null; // [FishEdge]
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  FishEdge: { // root type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Fish']; // Fish!
+  }
   Hour: { // root type
     end: number; // Int!
     start: number; // Int!
+  }
+  PageInfo: { // root type
+    endCursor?: string | null; // String
+    hasNextPage: boolean; // Boolean!
+    hasPreviousPage: boolean; // Boolean!
+    startCursor?: string | null; // String
   }
   Query: {};
   String: string;
@@ -50,6 +72,7 @@ export interface NexusGenRootTypes {
 export interface NexusGenAllTypes extends NexusGenRootTypes {
   FishLocation: NexusGenEnums['FishLocation'];
   FishShadow: NexusGenEnums['FishShadow'];
+  Hemisphere: NexusGenEnums['Hemisphere'];
 }
 
 export interface NexusGenFieldTypes {
@@ -66,13 +89,27 @@ export interface NexusGenFieldTypes {
     shadow: NexusGenEnums['FishShadow']; // FishShadow!
     southernMonths: number[]; // [Int!]!
   }
+  FishConnection: { // field return type
+    edges: Array<NexusGenRootTypes['FishEdge'] | null> | null; // [FishEdge]
+    pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
+  }
+  FishEdge: { // field return type
+    cursor: string; // String!
+    node: NexusGenRootTypes['Fish']; // Fish!
+  }
   Hour: { // field return type
     end: number; // Int!
     start: number; // Int!
   }
+  PageInfo: { // field return type
+    endCursor: string | null; // String
+    hasNextPage: boolean; // Boolean!
+    hasPreviousPage: boolean; // Boolean!
+    startCursor: string | null; // String
+  }
   Query: { // field return type
     fish: NexusGenRootTypes['Fish']; // Fish!
-    fishes: NexusGenRootTypes['Fish'][]; // [Fish!]!
+    fishes: NexusGenRootTypes['FishConnection']; // FishConnection!
     foo: string; // String!
   }
 }
@@ -82,6 +119,14 @@ export interface NexusGenArgTypes {
     fish: { // args
       id: number; // Int!
     }
+    fishes: { // args
+      after?: string | null; // String
+      before?: string | null; // String
+      first?: number | null; // Int
+      hemisphere?: NexusGenEnums['Hemisphere'] | null; // Hemisphere
+      last?: number | null; // Int
+      month?: number | null; // Int
+    }
   }
 }
 
@@ -90,11 +135,11 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "Fish" | "Hour" | "Query";
+export type NexusGenObjectNames = "Fish" | "FishConnection" | "FishEdge" | "Hour" | "PageInfo" | "Query";
 
 export type NexusGenInputNames = never;
 
-export type NexusGenEnumNames = "FishLocation" | "FishShadow";
+export type NexusGenEnumNames = "FishLocation" | "FishShadow" | "Hemisphere";
 
 export type NexusGenInterfaceNames = never;
 
@@ -128,6 +173,7 @@ declare global {
   interface NexusGenPluginTypeConfig<TypeName extends string> {
   }
   interface NexusGenPluginFieldConfig<TypeName extends string, FieldName extends string> {
+    
   }
   interface NexusGenPluginSchemaConfig {
   }

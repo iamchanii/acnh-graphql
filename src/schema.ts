@@ -1,4 +1,4 @@
-import { makeSchema } from '@nexus/schema';
+import { makeSchema, connectionPlugin } from '@nexus/schema';
 import path from 'path';
 import * as allTypes from './graphql';
 
@@ -17,4 +17,5 @@ export const schema = makeSchema({
     ],
     contextType: 'api.ContextType',
   },
+  plugins: [connectionPlugin()],
 });
