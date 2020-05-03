@@ -1,1 +1,3 @@
-export interface ContextType {}
+export interface ContextType {
+  fishes: any[];
+}

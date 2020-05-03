@@ -2,6 +2,69 @@
 ### Do not make changes to this file directly
 
 
+"""물고기"""
+type Fish {
+  """지느러미 유무"""
+  hasFin: Boolean!
+
+  """울음소리 유무"""
+  hasSound: Boolean!
+
+  """출현 시간"""
+  hours: [Hour!]!
+  id: ID!
+
+  """출현 장소"""
+  locations: [FishLocation!]!
+
+  """이름"""
+  name: String!
+
+  """북반구 기준 출현 기간"""
+  northernMonths: [Int!]!
+
+  """비 또는 눈오는 날에만 출현 유무"""
+  onlyRaining: Boolean!
+
+  """판매 금액"""
+  price: Int!
+
+  """그림자 크기"""
+  shadow: FishShadow!
+
+  """남반구 기준 출현 기간"""
+  southernMonths: [Int!]!
+}
+
+"""물고기 출현 장소"""
+enum FishLocation {
+  CLIFFTOP
+  MOUTH
+  OCEAN
+  PIER
+  POND
+  RIVER
+}
+
+"""물고기 그림자"""
+enum FishShadow {
+  LARGE
+  MEDIUM
+  NARROW
+  SMALL
+  XLARGE
+  XSMALL
+  XXLARGE
+}
+
+"""출현 시간"""
+type Hour {
+  end: Int!
+  start: Int!
+}
+
 type Query {
+  """전체 물고기 목록을 가져옵니다."""
+  fishes: [Fish!]!
   foo: String!
 }

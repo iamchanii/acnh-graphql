@@ -17,9 +17,28 @@ export interface NexusGenInputs {
 }
 
 export interface NexusGenEnums {
+  FishLocation: "clifftop" | "mouth" | "ocean" | "pier" | "pond" | "river"
+  FishShadow: 4 | 3 | "narrow" | 2 | 5 | 1 | 6
 }
 
 export interface NexusGenRootTypes {
+  Fish: { // root type
+    hasFin: boolean; // Boolean!
+    hasSound: boolean; // Boolean!
+    hours: NexusGenRootTypes['Hour'][]; // [Hour!]!
+    id: string; // ID!
+    locations: NexusGenEnums['FishLocation'][]; // [FishLocation!]!
+    name: string; // String!
+    northernMonths: number[]; // [Int!]!
+    onlyRaining: boolean; // Boolean!
+    price: number; // Int!
+    shadow: NexusGenEnums['FishShadow']; // FishShadow!
+    southernMonths: number[]; // [Int!]!
+  }
+  Hour: { // root type
+    end: number; // Int!
+    start: number; // Int!
+  }
   Query: {};
   String: string;
   Int: number;
@@ -29,10 +48,30 @@ export interface NexusGenRootTypes {
 }
 
 export interface NexusGenAllTypes extends NexusGenRootTypes {
+  FishLocation: NexusGenEnums['FishLocation'];
+  FishShadow: NexusGenEnums['FishShadow'];
 }
 
 export interface NexusGenFieldTypes {
+  Fish: { // field return type
+    hasFin: boolean; // Boolean!
+    hasSound: boolean; // Boolean!
+    hours: NexusGenRootTypes['Hour'][]; // [Hour!]!
+    id: string; // ID!
+    locations: NexusGenEnums['FishLocation'][]; // [FishLocation!]!
+    name: string; // String!
+    northernMonths: number[]; // [Int!]!
+    onlyRaining: boolean; // Boolean!
+    price: number; // Int!
+    shadow: NexusGenEnums['FishShadow']; // FishShadow!
+    southernMonths: number[]; // [Int!]!
+  }
+  Hour: { // field return type
+    end: number; // Int!
+    start: number; // Int!
+  }
   Query: { // field return type
+    fishes: NexusGenRootTypes['Fish'][]; // [Fish!]!
     foo: string; // String!
   }
 }
@@ -45,11 +84,11 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "Query";
+export type NexusGenObjectNames = "Fish" | "Hour" | "Query";
 
 export type NexusGenInputNames = never;
 
-export type NexusGenEnumNames = never;
+export type NexusGenEnumNames = "FishLocation" | "FishShadow";
 
 export type NexusGenInterfaceNames = never;
 

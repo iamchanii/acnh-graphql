@@ -1,10 +1,12 @@
 import { ApolloServer } from 'apollo-server';
 import { schema } from './schema';
+import fishes from './data/fish.json';
 
 const server = new ApolloServer({
   schema,
-  context: {},
-  
+  context: {
+    fishes,
+  },
 });
 
 const port = process.env.PORT || 4000;
