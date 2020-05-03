@@ -71,6 +71,7 @@ export const Query = queryType({
           type: FishShadow,
         }),
         hasFin: booleanArg(),
+        hasSound: booleanArg(),
       },
       resolve: (_, args, ctx) =>
         connectionFromArray(filterFishes(ctx.fishes, args), args) as any,

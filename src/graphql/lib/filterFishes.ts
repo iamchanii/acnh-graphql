@@ -48,6 +48,10 @@ const filterHasFin = createFilter((fish, { hasFin }) => {
   return hasFin ? fish.hasFin : true;
 });
 
+const filterHasSound = createFilter((fish, { hasSound }) => {
+  return hasSound ? fish.hasSound : true;
+});
+
 const filterFishes = (
   fishes: NexusGenFieldTypes['Fish'][],
   args: NexusGenArgTypes['Query']['fishes'],
@@ -59,6 +63,7 @@ const filterFishes = (
       filterLocation(args),
       filterShadow(args),
       filterHasFin(args),
+      filterHasSound(args),
     ]),
   );
 };

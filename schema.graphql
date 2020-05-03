@@ -123,6 +123,7 @@ type Query {
     """Returns the first n elements from the list."""
     first: Int
     hasFin: Boolean
+    hasSound: Boolean
 
     """북반구, 남반구 지정. month 필터 사용시 필요함."""
     hemisphere: Hemisphere = NORTHERN

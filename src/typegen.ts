@@ -130,6 +130,7 @@ export interface NexusGenArgTypes {
       before?: string | null; // String
       first?: number | null; // Int
       hasFin?: boolean | null; // Boolean
+      hasSound?: boolean | null; // Boolean
       hemisphere?: NexusGenEnums['Hemisphere'] | null; // Hemisphere
       last?: number | null; // Int
       location?: NexusGenEnums['FishLocation'] | null; // FishLocation
