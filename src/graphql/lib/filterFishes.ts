@@ -1,18 +1,8 @@
 import { allPass } from 'remeda/dist/commonjs/allPass';
 import { NexusGenArgTypes, NexusGenFieldTypes } from '../../typegen';
+import createFilter from './createFilter';
 
-type FilterFn = (
-  fish: NexusGenFieldTypes['Fish'],
-  args: NexusGenArgTypes['Query']['fishes'],
-) => boolean;
-
-const createFilter = (fn: FilterFn) => (
-  args: NexusGenArgTypes['Query']['fishes'],
-) => (fish: NexusGenFieldTypes['Fish']): boolean => {
-  return fn(fish, args);
-};
-
-const filterMonth = createFilter((fish, { month, hemisphere }) => {
+export const filterMonth = createFilter((fish, { month, hemisphere }) => {
   return month
     ? fish[
         hemisphere === 'northern' ? 'northernMonths' : 'southernMonths'
