@@ -4,6 +4,7 @@ import {
   inputObjectType,
   intArg,
   queryType,
+  booleanArg,
 } from '@nexus/schema';
 import { connectionFromArray } from 'graphql-relay';
 import { Fish, FishLoaction, FishShadow } from './fish';
@@ -69,6 +70,7 @@ export const Query = queryType({
         shadow: arg({
           type: FishShadow,
         }),
+        hasFin: booleanArg(),
       },
       resolve: (_, args, ctx) =>
         connectionFromArray(filterFishes(ctx.fishes, args), args) as any,

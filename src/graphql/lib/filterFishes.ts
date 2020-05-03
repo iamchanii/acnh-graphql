@@ -13,13 +13,11 @@ const createFilter = (fn: FilterFn) => (
 };
 
 const filterMonth = createFilter((fish, { month, hemisphere }) => {
-  if (month) {
-    return fish[
-      hemisphere === 'northern' ? 'northernMonths' : 'southernMonths'
-    ].includes(month);
-  }
-
-  return true;
+  return month
+    ? fish[
+        hemisphere === 'northern' ? 'northernMonths' : 'southernMonths'
+      ].includes(month)
+    : true;
 });
 
 const filterPrice = createFilter((fish, { price }) => {
@@ -39,19 +37,15 @@ const filterPrice = createFilter((fish, { price }) => {
 });
 
 const filterLocation = createFilter((fish, { location }) => {
-  if (location) {
-    return fish.locations.includes(location);
-  }
-
-  return true;
+  return location ? fish.locations.includes(location) : true;
 });
 
 const filterShadow = createFilter((fish, { shadow }) => {
-  if (shadow) {
-    return fish.shadow === shadow;
-  }
+  return shadow ? fish.shadow === shadow : true;
+});
 
-  return true;
+const filterHasFin = createFilter((fish, { hasFin }) => {
+  return hasFin ? fish.hasFin : true;
 });
 
 const filterFishes = (
@@ -64,6 +58,7 @@ const filterFishes = (
       filterPrice(args),
       filterLocation(args),
       filterShadow(args),
+      filterHasFin(args),
     ]),
   );
 };
