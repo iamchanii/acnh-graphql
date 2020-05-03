@@ -64,6 +64,12 @@ type Hour {
 }
 
 type Query {
+  """특정 물고기 정보를 가져옵니다."""
+  fish(
+    """물고기 ID"""
+    id: Int!
+  ): Fish!
+
   """전체 물고기 목록을 가져옵니다."""
   fishes: [Fish!]!
   foo: String!

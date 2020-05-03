@@ -71,12 +71,18 @@ export interface NexusGenFieldTypes {
     start: number; // Int!
   }
   Query: { // field return type
+    fish: NexusGenRootTypes['Fish']; // Fish!
     fishes: NexusGenRootTypes['Fish'][]; // [Fish!]!
     foo: string; // String!
   }
 }
 
 export interface NexusGenArgTypes {
+  Query: {
+    fish: { // args
+      id: number; // Int!
+    }
+  }
 }
 
 export interface NexusGenAbstractResolveReturnTypes {
