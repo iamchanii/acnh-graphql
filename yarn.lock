@@ -3146,6 +3146,11 @@ registry-url@^5.0.0:
   dependencies:
     rc "^1.2.8"
 
+remeda@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/remeda/-/remeda-0.0.19.tgz#7bc08b0009a3ecc231f84552ed8a7f386a15a77d"
+  integrity sha512-1UqWH2rOC7mdjop8+5ei1ozBY77B8hQmgeE1nsFUDLrDvw/rHTlHxOboaZUcRBh6Tp73KL4mPMKPk26NY+2UWw==
+
 repeat-element@^1.1.2:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/repeat-element/-/repeat-element-1.1.3.tgz#782e0d825c0c5a3bb39731f84efee6b742e6b1ce"
