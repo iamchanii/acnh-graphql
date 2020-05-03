@@ -38,11 +38,21 @@ const filterPrice = createFilter((fish, { price }) => {
   return true;
 });
 
+const filterLocation = createFilter((fish, { location }) => {
+  if (location) {
+    return fish.locations.includes(location);
+  }
+
+  return true;
+});
+
 const filterFishes = (
   fishes: NexusGenFieldTypes['Fish'][],
   args: NexusGenArgTypes['Query']['fishes'],
 ) => {
-  return fishes.filter(allPass([filterMonth(args), filterPrice(args)]));
+  return fishes.filter(
+    allPass([filterMonth(args), filterPrice(args), filterLocation(args)]),
+  );
 };
 
 export default filterFishes;

@@ -1,6 +1,12 @@
-import { arg, enumType, inputObjectType, intArg, queryType } from '@nexus/schema';
+import {
+  arg,
+  enumType,
+  inputObjectType,
+  intArg,
+  queryType,
+} from '@nexus/schema';
 import { connectionFromArray } from 'graphql-relay';
-import { Fish } from './fish';
+import { Fish, FishLoaction } from './fish';
 import filterFishes from './lib/filterFishes';
 
 export const Hemisphere = enumType({
@@ -57,6 +63,9 @@ export const Query = queryType({
           description: '출현 기간',
         }),
         price: PriceInputType.asArg(),
+        location: arg({
+          type: FishLoaction,
+        }),
       },
       resolve: (_, args, ctx) =>
         connectionFromArray(filterFishes(ctx.fishes, args), args) as any,

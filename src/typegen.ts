@@ -131,6 +131,7 @@ export interface NexusGenArgTypes {
       first?: number | null; // Int
       hemisphere?: NexusGenEnums['Hemisphere'] | null; // Hemisphere
       last?: number | null; // Int
+      location?: NexusGenEnums['FishLocation'] | null; // FishLocation
       month?: number | null; // Int
       price?: NexusGenInputs['PriceInputType'] | null; // PriceInputType
     }
