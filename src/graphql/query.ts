@@ -6,7 +6,7 @@ import {
   queryType,
 } from '@nexus/schema';
 import { connectionFromArray } from 'graphql-relay';
-import { Fish, FishLoaction } from './fish';
+import { Fish, FishLoaction, FishShadow } from './fish';
 import filterFishes from './lib/filterFishes';
 
 export const Hemisphere = enumType({
@@ -65,6 +65,9 @@ export const Query = queryType({
         price: PriceInputType.asArg(),
         location: arg({
           type: FishLoaction,
+        }),
+        shadow: arg({
+          type: FishShadow,
         }),
       },
       resolve: (_, args, ctx) =>

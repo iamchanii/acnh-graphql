@@ -133,6 +133,7 @@ type Query {
     """출현 기간"""
     month: Int
     price: PriceInputType
+    shadow: FishShadow
   ): QueryFishes_Connection!
   foo: String!
 }

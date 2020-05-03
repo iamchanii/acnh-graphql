@@ -134,6 +134,7 @@ export interface NexusGenArgTypes {
       location?: NexusGenEnums['FishLocation'] | null; // FishLocation
       month?: number | null; // Int
       price?: NexusGenInputs['PriceInputType'] | null; // PriceInputType
+      shadow?: NexusGenEnums['FishShadow'] | null; // FishShadow
     }
   }
 }
