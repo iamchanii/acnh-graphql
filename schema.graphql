@@ -54,6 +54,17 @@ enum FishLocation {
   RIVER
 }
 
+enum FishOrderByInput {
+  hours_ASC
+  hours_DESC
+  name_ASC
+  name_DESC
+  price_ASC
+  price_DESC
+  shadow_ASC
+  shadow_DESC
+}
+
 """물고기 그림자"""
 enum FishShadow {
   LARGE
@@ -134,6 +145,7 @@ type Query {
 
     """출현 기간"""
     month: Int
+    orderBy: FishOrderByInput
     price: PriceInputType
     shadow: FishShadow
   ): QueryFishes_Connection!

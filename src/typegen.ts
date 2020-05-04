@@ -29,6 +29,7 @@ export interface NexusGenInputs {
 
 export interface NexusGenEnums {
   FishLocation: "clifftop" | "mouth" | "ocean" | "pier" | "pond" | "river"
+  FishOrderByInput: "hours_ASC" | "hours_DESC" | "name_ASC" | "name_DESC" | "price_ASC" | "price_DESC" | "shadow_ASC" | "shadow_DESC"
   FishShadow: 4 | 3 | "narrow" | 2 | 5 | 1 | 6
   Hemisphere: "northern" | "southern"
 }
@@ -76,6 +77,7 @@ export interface NexusGenRootTypes {
 export interface NexusGenAllTypes extends NexusGenRootTypes {
   PriceInputType: NexusGenInputs['PriceInputType'];
   FishLocation: NexusGenEnums['FishLocation'];
+  FishOrderByInput: NexusGenEnums['FishOrderByInput'];
   FishShadow: NexusGenEnums['FishShadow'];
   Hemisphere: NexusGenEnums['Hemisphere'];
 }
@@ -135,6 +137,7 @@ export interface NexusGenArgTypes {
       last?: number | null; // Int
       location?: NexusGenEnums['FishLocation'] | null; // FishLocation
       month?: number | null; // Int
+      orderBy?: NexusGenEnums['FishOrderByInput'] | null; // FishOrderByInput
       price?: NexusGenInputs['PriceInputType'] | null; // PriceInputType
       shadow?: NexusGenEnums['FishShadow'] | null; // FishShadow
     }
@@ -150,7 +153,7 @@ export type NexusGenObjectNames = "Fish" | "FishEdge" | "Hour" | "PageInfo" | "Q
 
 export type NexusGenInputNames = "PriceInputType";
 
-export type NexusGenEnumNames = "FishLocation" | "FishShadow" | "Hemisphere";
+export type NexusGenEnumNames = "FishLocation" | "FishOrderByInput" | "FishShadow" | "Hemisphere";
 
 export type NexusGenInterfaceNames = never;
 

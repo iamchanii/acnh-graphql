@@ -1,5 +1,6 @@
 import { allPass } from 'remeda/dist/commonjs/allPass';
-import { NexusGenArgTypes, NexusGenFieldTypes } from '../../typegen';
+import { NexusGenArgTypes } from '../../typegen';
+import { FishType } from './../../types';
 import filterHasFin from './filterHasFin';
 import filterHasSound from './filterHasSound';
 import filterLocation from './filterLocation';
@@ -8,7 +9,7 @@ import filterPrice from './filterPrice';
 import filterShadow from './filterShadow';
 
 const filterFishes = (
-  fishes: NexusGenFieldTypes['Fish'][],
+  fishes: FishType[],
   args: NexusGenArgTypes['Query']['fishes'],
 ) => {
   return fishes.filter(

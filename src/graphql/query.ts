@@ -1,14 +1,15 @@
 import {
   arg,
+  booleanArg,
   enumType,
   inputObjectType,
   intArg,
   queryType,
-  booleanArg,
 } from '@nexus/schema';
 import { connectionFromArray } from 'graphql-relay';
 import { Fish, FishLoaction, FishShadow } from './fish';
 import filterFishes from './lib/filterFishes';
+import sortFishes from './lib/sortFishes';
 
 export const Hemisphere = enumType({
   name: 'Hemisphere',
@@ -25,6 +26,20 @@ export const PriceInputType = inputObjectType({
     t.int('min');
     t.int('max');
   },
+});
+
+export const FishOrderByInput = enumType({
+  name: 'FishOrderByInput',
+  members: [
+    'name_ASC',
+    'name_DESC',
+    'price_ASC',
+    'price_DESC',
+    'hours_ASC',
+    'hours_DESC',
+    'shadow_ASC',
+    'shadow_DESC',
+  ],
 });
 
 export const Query = queryType({
@@ -72,9 +87,15 @@ export const Query = queryType({
         }),
         hasFin: booleanArg(),
         hasSound: booleanArg(),
+        orderBy: arg({
+          type: FishOrderByInput,
+        }),
       },
       resolve: (_, args, ctx) =>
-        connectionFromArray(filterFishes(ctx.fishes, args), args) as any,
+        connectionFromArray(
+          filterFishes(ctx.fishes, args).sort(sortFishes(args)),
+          args,
+        ) as any,
       extendConnection(t) {
         t.int('totalCount', {
           resolve: (_, __, ctx) => ctx.fishes.length,
