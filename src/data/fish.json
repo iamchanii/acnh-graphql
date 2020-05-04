@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "납줄개",
     "price": 900,
     "locations": ["river"],
@@ -14,7 +14,7 @@
     "southernMonths": [6, 7, 8, 4, 5]
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "피라미",
     "price": 200,
     "locations": ["river"],
@@ -28,7 +28,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "붕어",
     "price": 160,
     "locations": ["river"],
@@ -42,7 +42,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "황어",
     "price": 240,
     "locations": ["river"],
@@ -56,7 +56,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 5,
+    "id": "5",
     "name": "잉어",
     "price": 300,
     "locations": ["pond"],
@@ -70,7 +70,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 6,
+    "id": "6",
     "name": "비단잉어",
     "price": 4000,
     "locations": ["pond"],
@@ -84,7 +84,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 7,
+    "id": "7",
     "name": "금붕어",
     "price": 1300,
     "locations": ["pond"],
@@ -98,7 +98,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 8,
+    "id": "8",
     "name": "툭눈금붕어",
     "price": 1300,
     "locations": ["pond"],
@@ -112,7 +112,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 9,
+    "id": "9",
     "name": "난주",
     "price": 4500,
     "locations": ["pond"],
@@ -126,7 +126,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 10,
+    "id": "10",
     "name": "송사리",
     "price": 300,
     "locations": ["pond"],
@@ -140,7 +140,7 @@
     "southernMonths": [9, 10, 11, 0, 1]
   },
   {
-    "id": 11,
+    "id": "11",
     "name": "가재",
     "price": 200,
     "locations": ["pond"],
@@ -154,7 +154,7 @@
     "southernMonths": [9, 10, 11, 0, 1, 2]
   },
   {
-    "id": 12,
+    "id": "12",
     "name": "자라",
     "price": 3750,
     "locations": ["river"],
@@ -168,7 +168,7 @@
     "southernMonths": [1, 2]
   },
   {
-    "id": 13,
+    "id": "13",
     "name": "늑대거북",
     "price": 5000,
     "locations": ["river"],
@@ -182,7 +182,7 @@
     "southernMonths": [9, 10, 11, 0, 1, 2, 3]
   },
   {
-    "id": 14,
+    "id": "14",
     "name": "올챙이",
     "price": 100,
     "locations": ["pond"],
@@ -196,7 +196,7 @@
     "southernMonths": [8, 9, 10, 11, 0]
   },
   {
-    "id": 15,
+    "id": "15",
     "name": "개구리",
     "price": 120,
     "locations": ["pond"],
@@ -210,7 +210,7 @@
     "southernMonths": [10, 11, 0, 1]
   },
   {
-    "id": 16,
+    "id": "16",
     "name": "동사리",
     "price": 400,
     "locations": ["river"],
@@ -224,7 +224,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 17,
+    "id": "17",
     "name": "미꾸라지",
     "price": 400,
     "locations": ["river"],
@@ -238,7 +238,7 @@
     "southernMonths": [8, 9, 10]
   },
   {
-    "id": 18,
+    "id": "18",
     "name": "메기",
     "price": 800,
     "locations": ["pond"],
@@ -252,7 +252,7 @@
     "southernMonths": [10, 11, 0, 1, 2, 3]
   },
   {
-    "id": 19,
+    "id": "19",
     "name": "가물치",
     "price": 5500,
     "locations": ["pond"],
@@ -266,7 +266,7 @@
     "southernMonths": [11, 0, 1]
   },
   {
-    "id": 20,
+    "id": "20",
     "name": "블루길",
     "price": 180,
     "locations": ["river"],
@@ -280,7 +280,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 21,
+    "id": "21",
     "name": "옐로우퍼치",
     "price": 300,
     "locations": ["river"],
@@ -294,7 +294,7 @@
     "southernMonths": [6, 7, 8, 3, 4, 5]
   },
   {
-    "id": 22,
+    "id": "22",
     "name": "큰입배스",
     "price": 400,
     "locations": ["river"],
@@ -308,7 +308,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 23,
+    "id": "23",
     "name": "틸라피아",
     "price": 800,
     "locations": ["river"],
@@ -322,7 +322,7 @@
     "southernMonths": [11, 0, 1, 2, 3]
   },
   {
-    "id": 24,
+    "id": "24",
     "name": "강꼬치고기",
     "price": 1800,
     "locations": ["river"],
@@ -336,7 +336,7 @@
     "southernMonths": [2, 3, 4, 5]
   },
   {
-    "id": 25,
+    "id": "25",
     "name": "빙어",
     "price": 400,
     "locations": ["river"],
@@ -350,7 +350,7 @@
     "southernMonths": [6, 7, 5]
   },
   {
-    "id": 26,
+    "id": "26",
     "name": "은어",
     "price": 900,
     "locations": ["river"],
@@ -364,7 +364,7 @@
     "southernMonths": [0, 1, 2]
   },
   {
-    "id": 27,
+    "id": "27",
     "name": "산천어",
     "price": 1000,
     "locations": ["pond", "clifftop"],
@@ -378,7 +378,7 @@
     "southernMonths": [8, 9, 10, 11, 2, 3, 4]
   },
   {
-    "id": 28,
+    "id": "28",
     "name": "열목어",
     "price": 3800,
     "locations": ["pond", "clifftop"],
@@ -392,7 +392,7 @@
     "southernMonths": [8, 9, 10, 11, 2, 3, 4]
   },
   {
-    "id": 29,
+    "id": "29",
     "name": "금송어",
     "price": 15000,
     "locations": ["pond", "clifftop"],
@@ -406,7 +406,7 @@
     "southernMonths": [8, 9, 10, 2, 3, 4]
   },
   {
-    "id": 30,
+    "id": "30",
     "name": "일본연어",
     "price": 15000,
     "locations": ["pond", "clifftop"],
@@ -420,7 +420,7 @@
     "southernMonths": [6, 7, 8, 5]
   },
   {
-    "id": 31,
+    "id": "31",
     "name": "연어",
     "price": 700,
     "locations": ["mouth"],
@@ -434,7 +434,7 @@
     "southernMonths": [2]
   },
   {
-    "id": 32,
+    "id": "32",
     "name": "왕연어",
     "price": 1800,
     "locations": ["mouth"],
@@ -448,7 +448,7 @@
     "southernMonths": [2]
   },
   {
-    "id": 33,
+    "id": "33",
     "name": "참게",
     "price": 2000,
     "locations": ["river"],
@@ -462,7 +462,7 @@
     "southernMonths": [2, 3, 4]
   },
   {
-    "id": 34,
+    "id": "34",
     "name": "구피",
     "price": 1300,
     "locations": ["river"],
@@ -476,7 +476,7 @@
     "southernMonths": [9, 10, 11, 0, 1, 2, 3, 4]
   },
   {
-    "id": 35,
+    "id": "35",
     "name": "닥터피시",
     "price": 1500,
     "locations": ["river"],
@@ -490,7 +490,7 @@
     "southernMonths": [10, 11, 0, 1, 2]
   },
   {
-    "id": 36,
+    "id": "36",
     "name": "천사어",
     "price": 3000,
     "locations": ["river"],
@@ -504,7 +504,7 @@
     "southernMonths": [10, 11, 0, 1, 2, 3]
   },
   {
-    "id": 37,
+    "id": "37",
     "name": "베타",
     "price": 2500,
     "locations": ["river"],
@@ -518,7 +518,7 @@
     "southernMonths": [10, 11, 0, 1, 2, 3]
   },
   {
-    "id": 38,
+    "id": "38",
     "name": "네온테트라",
     "price": 500,
     "locations": ["river"],
@@ -532,7 +532,7 @@
     "southernMonths": [9, 10, 11, 0, 1, 2, 3, 4]
   },
   {
-    "id": 39,
+    "id": "39",
     "name": "레인보우피시",
     "price": 800,
     "locations": ["river"],
@@ -546,7 +546,7 @@
     "southernMonths": [10, 11, 0, 1, 2, 3]
   },
   {
-    "id": 40,
+    "id": "40",
     "name": "피라니아",
     "price": 2500,
     "locations": ["river"],
@@ -563,7 +563,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 41,
+    "id": "41",
     "name": "아로와나",
     "price": 10000,
     "locations": ["river"],
@@ -577,7 +577,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 42,
+    "id": "42",
     "name": "황금연어",
     "price": 15000,
     "locations": ["river"],
@@ -591,7 +591,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 43,
+    "id": "43",
     "name": "가아",
     "price": 6000,
     "locations": ["pond"],
@@ -605,7 +605,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 44,
+    "id": "44",
     "name": "피라루쿠",
     "price": 10000,
     "locations": ["river"],
@@ -619,7 +619,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 45,
+    "id": "45",
     "name": "엔드리케리",
     "price": 4000,
     "locations": ["river"],
@@ -633,7 +633,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 46,
+    "id": "46",
     "name": "철갑상어",
     "price": 10000,
     "locations": ["mouth"],
@@ -647,7 +647,7 @@
     "southernMonths": [6, 7, 8, 2, 3, 4, 5]
   },
   {
-    "id": 47,
+    "id": "47",
     "name": "클리오네",
     "price": 1000,
     "locations": ["ocean"],
@@ -661,7 +661,7 @@
     "southernMonths": [6, 7, 8, 5]
   },
   {
-    "id": 48,
+    "id": "48",
     "name": "해마",
     "price": 1100,
     "locations": ["ocean"],
@@ -675,7 +675,7 @@
     "southernMonths": [9, 10, 11, 0, 1, 2, 3, 4]
   },
   {
-    "id": 49,
+    "id": "49",
     "name": "흰동가리",
     "price": 650,
     "locations": ["ocean"],
@@ -689,7 +689,7 @@
     "southernMonths": [9, 10, 11, 0, 1, 2]
   },
   {
-    "id": 50,
+    "id": "50",
     "name": "블루탱",
     "price": 1000,
     "locations": ["ocean"],
@@ -703,7 +703,7 @@
     "southernMonths": [9, 10, 11, 0, 1, 2]
   },
   {
-    "id": 51,
+    "id": "51",
     "name": "나비고기",
     "price": 1000,
     "locations": ["ocean"],
@@ -717,7 +717,7 @@
     "southernMonths": [9, 10, 11, 0, 1, 2]
   },
   {
-    "id": 52,
+    "id": "52",
     "name": "나폴레옹고기",
     "price": 10000,
     "locations": ["ocean"],
@@ -731,7 +731,7 @@
     "southernMonths": [0, 1]
   },
   {
-    "id": 53,
+    "id": "53",
     "name": "쏨뱅이",
     "price": 500,
     "locations": ["ocean"],
@@ -745,7 +745,7 @@
     "southernMonths": [9, 10, 11, 0, 1, 2, 3, 4]
   },
   {
-    "id": 54,
+    "id": "54",
     "name": "복어",
     "price": 5000,
     "locations": ["ocean"],
@@ -759,7 +759,7 @@
     "southernMonths": [6, 7, 4, 5]
   },
   {
-    "id": 55,
+    "id": "55",
     "name": "가시복",
     "price": 250,
     "locations": ["ocean"],
@@ -773,7 +773,7 @@
     "southernMonths": [0, 1, 2]
   },
   {
-    "id": 56,
+    "id": "56",
     "name": "멸치",
     "price": 200,
     "locations": ["ocean"],
@@ -787,7 +787,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 57,
+    "id": "57",
     "name": "전갱이",
     "price": 150,
     "locations": ["ocean"],
@@ -801,7 +801,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 58,
+    "id": "58",
     "name": "돌돔",
     "price": 5000,
     "locations": ["ocean"],
@@ -815,7 +815,7 @@
     "southernMonths": [8, 9, 10, 11, 0, 1, 2, 3, 4]
   },
   {
-    "id": 59,
+    "id": "59",
     "name": "농어",
     "price": 400,
     "locations": ["ocean"],
@@ -829,7 +829,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 60,
+    "id": "60",
     "name": "도미",
     "price": 3000,
     "locations": ["ocean"],
@@ -843,7 +843,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 61,
+    "id": "61",
     "name": "가자미",
     "price": 300,
     "locations": ["ocean"],
@@ -857,7 +857,7 @@
     "southernMonths": [6, 7, 8, 9, 3, 4, 5]
   },
   {
-    "id": 62,
+    "id": "62",
     "name": "넙치",
     "price": 800,
     "locations": ["ocean"],
@@ -871,7 +871,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 63,
+    "id": "63",
     "name": "오징어",
     "price": 500,
     "locations": ["ocean"],
@@ -885,7 +885,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 5]
   },
   {
-    "id": 64,
+    "id": "64",
     "name": "곰치",
     "price": 2000,
     "locations": ["ocean"],
@@ -899,7 +899,7 @@
     "southernMonths": [1, 2, 3]
   },
   {
-    "id": 65,
+    "id": "65",
     "name": "리본장어",
     "price": 600,
     "locations": ["ocean"],
@@ -913,7 +913,7 @@
     "southernMonths": [11, 0, 1, 2, 3]
   },
   {
-    "id": 66,
+    "id": "66",
     "name": "다랑어",
     "price": 7000,
     "locations": ["pier"],
@@ -927,7 +927,7 @@
     "southernMonths": [6, 7, 8, 9, 4, 5]
   },
   {
-    "id": 67,
+    "id": "67",
     "name": "청새치",
     "price": 10000,
     "locations": ["pier"],
@@ -941,7 +941,7 @@
     "southernMonths": [6, 7, 8, 9, 0, 1, 2, 4, 5]
   },
   {
-    "id": 68,
+    "id": "68",
     "name": "무명갈전갱이",
     "price": 4500,
     "locations": ["pier"],
@@ -955,7 +955,7 @@
     "southernMonths": [10, 11, 0, 1, 2, 3]
   },
   {
-    "id": 69,
+    "id": "69",
     "name": "만새기",
     "price": 6000,
     "locations": ["pier"],
@@ -969,7 +969,7 @@
     "southernMonths": [10, 11, 0, 1, 2, 3]
   },
   {
-    "id": 70,
+    "id": "70",
     "name": "개복치",
     "price": 4000,
     "locations": ["ocean"],
@@ -983,7 +983,7 @@
     "southernMonths": [0, 1, 2]
   },
   {
-    "id": 71,
+    "id": "71",
     "name": "가오리",
     "price": 3000,
     "locations": ["ocean"],
@@ -997,7 +997,7 @@
     "southernMonths": [1, 2, 3, 4]
   },
   {
-    "id": 72,
+    "id": "72",
     "name": "톱상어",
     "price": 12000,
     "locations": ["ocean"],
@@ -1011,7 +1011,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 73,
+    "id": "73",
     "name": "귀상어",
     "price": 8000,
     "locations": ["ocean"],
@@ -1025,7 +1025,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 74,
+    "id": "74",
     "name": "상어",
     "price": 15000,
     "locations": ["ocean"],
@@ -1039,7 +1039,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 75,
+    "id": "75",
     "name": "고래상어",
     "price": 13000,
     "locations": ["ocean"],
@@ -1053,7 +1053,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 76,
+    "id": "76",
     "name": "빨판상어",
     "price": 1500,
     "locations": ["ocean"],
@@ -1067,7 +1067,7 @@
     "southernMonths": [11, 0, 1, 2]
   },
   {
-    "id": 77,
+    "id": "77",
     "name": "초롱아귀",
     "price": 2500,
     "locations": ["ocean"],
@@ -1081,7 +1081,7 @@
     "southernMonths": [6, 7, 8, 4, 5]
   },
   {
-    "id": 78,
+    "id": "78",
     "name": "산갈치",
     "price": 9000,
     "locations": ["ocean"],
@@ -1095,7 +1095,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 5]
   },
   {
-    "id": 79,
+    "id": "79",
     "name": "데메니기스",
     "price": 15000,
     "locations": ["ocean"],
@@ -1109,7 +1109,7 @@
     "southernMonths": [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5]
   },
   {
-    "id": 80,
+    "id": "80",
     "name": "실러캔스",
     "price": 15000,
     "locations": ["ocean"],
