@@ -93,7 +93,7 @@ export const Query = queryType({
       },
       resolve: (_, args, ctx) =>
         connectionFromArray(
-          filterFishes(ctx.fishes, args).sort(sortFishes(args)),
+          ctx.fishes.filter(filterFishes(args)).sort(sortFishes(args)),
           args,
         ) as any,
       extendConnection(t) {
