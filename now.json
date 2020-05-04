@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.ts",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/graphql",
+      "methods": ["GET"],
+      "dest": "src/index.ts",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "src": "/.*",
+      "status": 308,
+      "dest": "https://canifish.now.sh"
+    }
+  ]
+}
