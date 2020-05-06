@@ -2,6 +2,7 @@ import {
   arg,
   booleanArg,
   enumType,
+  idArg,
   inputObjectType,
   intArg,
   queryType,
@@ -52,7 +53,7 @@ export const Query = queryType({
       type: Fish,
       description: '특정 물고기 정보를 가져옵니다.',
       args: {
-        id: intArg({
+        id: idArg({
           required: true,
           description: '물고기 ID',
         }),
