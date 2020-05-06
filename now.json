@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/graphql",
-      "methods": ["GET"],
+      "methods": ["GET", "POST"],
       "dest": "src/index.ts",
       "headers": {
         "Access-Control-Allow-Origin": "*"

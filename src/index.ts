@@ -7,6 +7,8 @@ const server = new ApolloServer({
   context: {
     fishes,
   },
+  introspection: true,
+  playground: true,
 });
 
 export default server.createHandler();
